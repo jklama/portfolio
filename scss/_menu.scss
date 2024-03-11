@@ -12,7 +12,7 @@
   &__burger {
     position: absolute;
     right: 0;
-    width: 28px;
+    width: 25px;
     height: 3px;
     background: set-text-color($primary-color);
     @include transition-ease;
@@ -30,7 +30,7 @@
       content: '';
       position: absolute;
       top: 8px;
-      width: 28px;
+      width: 20px;
       height: 3px;
       background: set-text-color($primary-color);
       @include transition-ease;
@@ -76,5 +76,37 @@
     &.open {
       transform: translateY(0);
     }
+    &__item {
+      transform: translateX(100vw);
+      @include transition-ease;
+
+      &.open {
+        transform: translateX(0);
+        @include transition-ease;
+      }
+      &.active > a {
+        color: $secondary-color;
+      }
+    }
+
+    &__link {
+      display: inline-block;
+
+      font-size: 2rem;
+      text-transform: uppercase;
+      padding: 2rem 0;
+      font-weight: 300;
+      @include transition-ease;
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+@for $i from 1 through 4 {
+  .menu-nav__item:nth-child(#{$i}) {
+    transition-delay: ($i * 0.1s) + 0.1s;
   }
 }
