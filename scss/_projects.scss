@@ -3,12 +3,7 @@
   &__bio-image {
     height: 30vh;
     width: 100%;
-    background-color: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.9),
-        rgba(0, 0, 0, 0.3)
-      ),
-      black;
+    background-image: url('../dist/img/IMG_6387.PNG');
     background-size: cover;
     display: flex;
     flex-direction: column;
